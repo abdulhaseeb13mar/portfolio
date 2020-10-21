@@ -1,5 +1,4 @@
 .main-home-wrapper {
-  //   border: 1px solid red;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,6 +7,12 @@
   background-image: url("../../assets/background.jpg");
   background-position: center;
   background-size: cover;
+
+  .home-headerbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
 
   .home-me-icon-div {
     border-radius: 50%;
