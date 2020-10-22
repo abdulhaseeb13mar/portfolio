@@ -1,33 +1,83 @@
 .main-home-wrapper {
   height: 100vh;
+  position: absolute;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/background.jpg");
+  background-image: url("../../assets/meBack.jpg");
   background-position: center;
   background-size: cover;
-
-  .home-headerbar {
-    width: 100%;
-    position: absolute;
-    top: 0;
-  }
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  transition: 0.2s ease-in;
 
   .home-me-icon-div {
     border-radius: 50%;
     cursor: pointer;
   }
+}
 
-  .home-centered-div {
-    display: flex;
-    flex-direction: column;
+// .home-headerbar {
+//   display: none;
+// }
+
+.home-centered-div {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
+  // justify-content: center;
+  margin-top: 20vh;
+  margin-left: 10vw;
+  // height: 90vh;
+  .home-text1 {
+    margin-top: 20px;
+    // text-align: center;
+  }
+}
+
+.home-MySummary-wrapper {
+  .home-MySummary-div {
+    display: none;
+    margin-left: 5vw;
+    // display: flex;
     align-items: center;
-    justify-content: center;
-    .home-text1 {
-      margin-top: 20px;
-      color: white;
-      text-align: center;
+    justify-content: flex-start;
+    margin-top: 10vw;
+    flex-wrap: wrap;
+    // padding: 0 150px;
+
+    .MySummary-avatar-div {
+      min-width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .MySummary-summary-div {
+      // margin-left: 20px;
+
+      .MySummary-summary-heading {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .home-MySummary-btns-div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    // margin-left: calc(5vw + 150px);
+
+    .home-MySummary-btns-knowMe {
+      margin: 5px 10px;
+    }
+
+    .home-MySummary-btns-projects {
+      background-color: rgba($color: rgb(224, 224, 224), $alpha: 0.5);
+      color: black !important;
+      margin: 5px 10px;
     }
   }
 }

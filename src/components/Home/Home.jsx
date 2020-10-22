@@ -6,7 +6,6 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Button,
   Tabs,
   Tab,
   useMediaQuery,
@@ -15,6 +14,7 @@ import {
   ListItem,
   ListItemText,
 } from "@material-ui/core";
+import HomeSummary from "./HomeSummary";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 import Zoom from "react-reveal/Zoom";
@@ -42,6 +42,10 @@ function Home() {
   const handleToggleShow = () => {
     setShowStarter(false);
     setShowHeader(true);
+    setTimeout(() => {
+      document.getElementsByClassName("home-centered-div")[0].style.display = "none";
+      document.getElementsByClassName("home-MySummary-div")[0].style.display = "flex";
+    }, 300);
   };
 
   const handleTabsChange = (e, val) => {
@@ -53,45 +57,56 @@ function Home() {
   };
   return (
     <>
-      <Grid className="main-home-wrapper" container>
-        <Fade bottom when={showHeader}>
-          <div className="home-headerbar">
-            <AppBar position="static" color="transparent">
-              {MediaQueryMatches ? (
-                <Toolbar>
-                  <IconButton
-                    edge="start"
-                    className={classes.menuButton}
-                    color="inherit"
-                    aria-label="menu"
-                    onClick={handleToggleDrawer}>
-                    <MenuIcon style={{ color: "white" }} />
-                  </IconButton>
-                </Toolbar>
-              ) : (
-                <Tabs value={tabIndex} onChange={handleTabsChange} style={{ color: "white" }}>
-                  <Tab label="Home" />
-                  <Tab label="About Me" />
-                  <Tab label="Projects" />
-                  <Tab label="Contact Me" />
-                </Tabs>
-              )}
-            </AppBar>
-          </div>
-        </Fade>
-        <Zoom right cascade when={showStarter}>
-          <div className="home-centered-div" onClick={handleToggleShow}>
-            <Avatar alt="Me" src={ME} className={classes.large} />
-            <Typography variant="h3" className="home-text1">
-              Hey! <br /> I am Abdul Haseeb
-            </Typography>
-          </div>
-        </Zoom>
-      </Grid>
+      <Grid className="main-home-wrapper" container style={{ opacity: showHeader ? 0.7 : 1 }}></Grid>
+      <Fade bottom when={showHeader} collapse>
+        <div className="home-headerbar">
+          <AppBar position="static" color="transparent" style={{ boxShadow: "none" }}>
+            {MediaQueryMatches ? (
+              <Toolbar>
+                <IconButton
+                  edge="start"
+                  className={classes.menuButton}
+                  color="inherit"
+                  aria-label="menu"
+                  onClick={handleToggleDrawer}>
+                  <MenuIcon style={{ color: "black" }} />
+                </IconButton>
+              </Toolbar>
+            ) : (
+              <Tabs value={tabIndex} onChange={handleTabsChange}>
+                <Tab label="Home" />
+                <Tab label="About Me" />
+                <Tab label="Projects" />
+                <Tab label="Contact Me" />
+              </Tabs>
+            )}
+          </AppBar>
+        </div>
+      </Fade>
+      <Fade left when={showHeader} collapse>
+        <HomeSummary />
+      </Fade>
+      <Zoom right cascade when={showStarter} collapse>
+        <div className="home-centered-div" onClick={handleToggleShow}>
+          <Avatar alt="Me" src={ME} className={classes.large} />
+          <Typography variant="h3" className="home-text1">
+            Hey! I am <br /> Abdul Haseeb
+          </Typography>
+        </div>
+      </Zoom>
       <Drawer anchor="top" open={drawerOpen} onClose={handleToggleDrawer}>
         <List>
           <ListItem button>
             <ListItemText>Home</ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemText>About Me</ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemText>Projects</ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemText>Contact Me</ListItemText>
           </ListItem>
         </List>
       </Drawer>

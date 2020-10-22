@@ -27,7 +27,7 @@ function FabComp() {
 
   return (
     <>
-      <Fab color="primary" aria-label="add" className={classes.fab} onClick={handleClick}>
+      <Fab color="secondary" aria-label="add" className={classes.fab} onClick={handleClick}>
         <AddIcon />
       </Fab>
       <Menu
