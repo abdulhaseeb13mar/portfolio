@@ -1,36 +1,20 @@
-import React, { useState, useEffect } from "react";
-import {
-  Grid,
-  Avatar,
-  Typography,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Tabs,
-  Tab,
-  useMediaQuery,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-} from "@material-ui/core";
+import React, { useState, useEffect, useContext } from "react";
+import { Grid, Avatar, Typography } from "@material-ui/core";
+import { ShowHeaderContext } from "../../store/Store";
 import HomeSummary from "./HomeSummary";
-import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import ME from "../../assets/me.jpg";
 import "./Home.scss";
 
-function Home() {
+function Home(props) {
   useEffect(() => {
     makeTrue();
   }, []);
+
   const [showStarter, setShowStarter] = useState(false);
-  const [showHeader, setShowHeader] = useState(false);
-  const [tabIndex, setTabIndex] = useState(0);
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const MediaQueryMatches = useMediaQuery("(max-width:640px)");
+  const [showHeader, setShowHeader] = useContext(ShowHeaderContext);
   const classes = useStyles();
 
   const makeTrue = () => {
@@ -48,41 +32,9 @@ function Home() {
     }, 300);
   };
 
-  const handleTabsChange = (e, val) => {
-    setTabIndex(val);
-  };
-
-  const handleToggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
   return (
     <>
       <Grid className="main-home-wrapper" container style={{ opacity: showHeader ? 0.7 : 1 }}></Grid>
-      <Fade bottom when={showHeader} collapse>
-        <div className="home-headerbar">
-          <AppBar position="static" color="transparent" style={{ boxShadow: "none" }}>
-            {MediaQueryMatches ? (
-              <Toolbar>
-                <IconButton
-                  edge="start"
-                  className={classes.menuButton}
-                  color="inherit"
-                  aria-label="menu"
-                  onClick={handleToggleDrawer}>
-                  <MenuIcon style={{ color: "black" }} />
-                </IconButton>
-              </Toolbar>
-            ) : (
-              <Tabs value={tabIndex} onChange={handleTabsChange}>
-                <Tab label="Home" />
-                <Tab label="About Me" />
-                <Tab label="Projects" />
-                <Tab label="Contact Me" />
-              </Tabs>
-            )}
-          </AppBar>
-        </div>
-      </Fade>
       <Fade left when={showHeader} collapse>
         <HomeSummary />
       </Fade>
@@ -94,34 +46,11 @@ function Home() {
           </Typography>
         </div>
       </Zoom>
-      <Drawer anchor="top" open={drawerOpen} onClose={handleToggleDrawer}>
-        <List>
-          <ListItem button>
-            <ListItemText>Home</ListItemText>
-          </ListItem>
-          <ListItem button>
-            <ListItemText>About Me</ListItemText>
-          </ListItem>
-          <ListItem button>
-            <ListItemText>Projects</ListItemText>
-          </ListItem>
-          <ListItem button>
-            <ListItemText>Contact Me</ListItemText>
-          </ListItem>
-        </List>
-      </Drawer>
     </>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
-  title: {
-    flexGrow: 1,
-    color: "white",
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   large: {
     width: theme.spacing(30),
     height: theme.spacing(30),

@@ -5,6 +5,7 @@ import "./Home.scss";
 
 function HomeSummary() {
   const classes = useStyles();
+
   return (
     <div className="home-MySummary-wrapper">
       <div className="home-MySummary-div">
@@ -41,12 +42,6 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(15),
     height: theme.spacing(15),
     boxShadow: "0px 0px 4px 4px rgb(0,0,0,0.5)",
-    // transition: "0.2s ease-in-out",
-    // cursor: "pointer",
-    // "&:hover": {
-    //   width: theme.spacing(35),
-    //   height: theme.spacing(35),
-    // },
   },
 }));
 

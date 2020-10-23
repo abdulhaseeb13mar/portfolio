@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import ProjectCard from "./ProjectCard";
+import ProjectsData from "./ProjectsData";
 
 function Projects() {
-    return (
-        <div>
-            Projects
-        </div>
-    )
+  return (
+    <div>
+      {ProjectsData.map((project) => {
+        return <ProjectCard project={project} />;
+      })}
+    </div>
+  );
 }
 
-export default Projects
+export default Projects;
