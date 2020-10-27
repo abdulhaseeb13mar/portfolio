@@ -2,11 +2,22 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from "@material-ui/core";
 import { GitHub, Tv, PhotoLibrary } from "@material-ui/icons";
-import me from "../../assets/companions2.png";
-import ReactIcon from "../../assets/React-icon.png";
 
-function ProjectCard({ project }) {
+function ProjectCard(props) {
   const classes = useStyles();
+  const { project } = props;
+
+  const handleGithubLink = () => {
+    window.open(project.github);
+  };
+
+  const handleDemoLink = () => {
+    window.open(project.demo);
+  };
+
+  const handlePhotosLink = () => {
+    props.openDialog(project.photos);
+  };
   return (
     <div style={{ marginTop: "20px" }}>
       <Card className={classes.root}>
@@ -21,24 +32,31 @@ function ProjectCard({ project }) {
             </Typography>
             <div>
               {Object.keys(project.technologies).map((tech) => {
-                return <img src={project.technologies[tech]} alt="logo" style={{ width: 30 }} />;
+                return (
+                  <img
+                    aria-label={tech}
+                    src={project.technologies[tech]}
+                    alt="logo"
+                    style={{ width: 20, marginLeft: 5, marginRight: 5 }}
+                  />
+                );
               })}
             </div>
           </CardContent>
         </CardActionArea>
         <CardActions>
           {project.github && (
-            <Button size="small" color="secondary">
+            <Button size="small" color="secondary" onClick={handleGithubLink}>
               <GitHub style={{ color: "black" }} />
             </Button>
           )}
           {project.demo && (
-            <Button size="small">
+            <Button size="small" onClick={handleDemoLink}>
               <Tv style={{ color: "white" }} />
             </Button>
           )}
           {project.photos && (
-            <Button size="small">
+            <Button size="small" onClick={handlePhotosLink}>
               <PhotoLibrary color="secondary" />
             </Button>
           )}

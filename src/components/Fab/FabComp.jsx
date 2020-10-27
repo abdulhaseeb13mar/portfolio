@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#424242",
   },
   fab: {
-    position: "absolute",
+    position: "fixed",
     bottom: 30,
     right: 30,
   },

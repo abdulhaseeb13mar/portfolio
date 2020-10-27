@@ -6,8 +6,8 @@ export const ShowHeaderContext = React.createContext("ShowHeaderContext");
 
 const Store = ({ children }) => {
   const [tab, setTab] = useState(0);
-  const [subRoutes, setSubRoutes] = useState(true);
-  const [showHeader, setShowHeader] = useState(true);
+  const [subRoutes, setSubRoutes] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
 
   return (
     <ShowHeaderContext.Provider value={[showHeader, setShowHeader]}>

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
-import { ShowHeaderContext, SubRoutesContext } from "./store/Store";
+import { ShowHeaderContext } from "./store/Store";
 import Fade from "react-reveal/Fade";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -9,8 +9,7 @@ import FabComp from "./components/Fab/FabComp";
 import Header from "./components/Header/Header";
 
 function Routes(props) {
-  const [showHeader, setShowHeader] = useContext(ShowHeaderContext);
-  const [subRoutes, setSubRoutes] = useContext(SubRoutesContext);
+  const [showHeader] = useContext(ShowHeaderContext);
   return (
     <>
       <Fade bottom when={showHeader} collapse>
