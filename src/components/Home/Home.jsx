@@ -36,7 +36,7 @@ function Home(props) {
     <>
       <Grid className="main-home-wrapper" container style={{ opacity: showHeader ? 0.7 : 1 }}></Grid>
       <Fade left when={showHeader} collapse>
-        <HomeSummary />
+        <HomeSummary history={props.history} />
       </Fade>
       <Zoom right cascade when={showStarter} collapse>
         <div className="home-centered-div" onClick={handleToggleShow}>

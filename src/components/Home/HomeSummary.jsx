@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { TabContext, SubRoutesContext } from "../../store/Store";
 import { Typography, Avatar, makeStyles, Button } from "@material-ui/core";
 import ME from "../../assets/me.jpg";
 import "./Home.scss";
 
-function HomeSummary() {
+function HomeSummary(props) {
   const classes = useStyles();
+  const [tab, setTab] = useContext(TabContext);
+  const [subRoutes, setSubRoutes] = useContext(SubRoutesContext);
+
+  const goToAboutPage = () => {
+    setTab(1);
+    setSubRoutes(true);
+    props.history.push("/about");
+  };
 
   return (
     <div className="home-MySummary-wrapper">
@@ -23,7 +32,11 @@ function HomeSummary() {
               My Expertise lies in the JavaScript language and React.
             </Typography>
             <div className="home-MySummary-btns-div">
-              <Button variant="contained" color="secondary" className="home-MySummary-btns-knowMe">
+              <Button
+                variant="contained"
+                color="secondary"
+                className="home-MySummary-btns-knowMe"
+                onClick={goToAboutPage}>
                 Know me more
               </Button>
               <Button variant="contained" className="home-MySummary-btns-projects">
