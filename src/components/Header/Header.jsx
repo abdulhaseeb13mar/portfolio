@@ -52,7 +52,7 @@ function Header(props) {
               color="inherit"
               aria-label="menu"
               onClick={handleToggleDrawer}>
-              <MenuIcon style={{ color: "black" }} />
+              <MenuIcon style={{ color: "white" }} />
             </IconButton>
           </Toolbar>
         ) : (

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { TabContext, SubRoutesContext } from "../../store/Store";
 import { Typography, Avatar, makeStyles, Button } from "@material-ui/core";
 import ME from "../../assets/me.jpg";
@@ -6,7 +6,9 @@ import "./Home.scss";
 
 function HomeSummary(props) {
   const classes = useStyles();
+  // eslint-disable-next-line no-unused-vars
   const [tab, setTab] = useContext(TabContext);
+  // eslint-disable-next-line no-unused-vars
   const [subRoutes, setSubRoutes] = useContext(SubRoutesContext);
 
   const goToAboutPage = () => {

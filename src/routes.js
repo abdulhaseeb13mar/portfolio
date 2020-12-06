@@ -9,7 +9,7 @@ import FabComp from "./components/Fab/FabComp";
 import Header from "./components/Header/Header";
 
 function Routes(props) {
-  const [showHeader] = useContext(ShowHeaderContext);
+  const [showHeader, setShowHeader] = useContext(ShowHeaderContext);
   return (
     <>
       <Fade bottom when={showHeader} collapse>
