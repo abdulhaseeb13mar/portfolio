@@ -6,6 +6,8 @@ import FamilyWinsPhotos from "../../assets/FamilyWins";
 import SlackClonePhotos from "../../assets/SlackClone";
 import ToDoAppPhotos from "../../assets/TodoApp";
 import TictactoePhotos from "../../assets/TicTacToe";
+import ShareFoodPakistanPhotos from "../../assets/ShareFoodPakistan";
+import HealthEarnPhotos from "../../assets/HealthEarn";
 
 export default [
   {
@@ -34,6 +36,34 @@ export default [
     github: "https://github.com/abdulhaseeb13mar/clone-slack-react",
     demo: "https://clone-slack-react-f2b16.firebaseapp.com",
     photos: SlackClonePhotos.dialog,
+  },
+  {
+    name: "Steps Counter Mobile App",
+    cardPhoto: HealthEarnPhotos.card,
+    description:
+      "A Mobile Side of My FYP where it counts the number of steps user has walked at the background and then periodically sends the user steps data to the iota tangle server",
+    technologies: {
+      react: TechnologiesIcons.react,
+      js: TechnologiesIcons.js,
+      firebase: TechnologiesIcons.firebase,
+    },
+    github: "https://github.com/abdulhaseeb13mar/healthEarn",
+    demo: false,
+    photos: HealthEarnPhotos.dialog,
+  },
+  {
+    name: "ShareFoodPakistan Mobile App",
+    cardPhoto: ShareFoodPakistanPhotos.card,
+    description:
+      "A Food Sharing app to let your access food not go to waste instead you can post it and give it someone needy or even sell it",
+    technologies: {
+      react: TechnologiesIcons.react,
+      js: TechnologiesIcons.js,
+      firebase: TechnologiesIcons.firebase,
+    },
+    github: false,
+    demo: false,
+    photos: ShareFoodPakistanPhotos.dialog,
   },
   {
     name: "Interactive To-Do App",

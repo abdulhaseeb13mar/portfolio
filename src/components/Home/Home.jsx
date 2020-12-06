@@ -41,6 +41,7 @@ function Home(props) {
       <Zoom right cascade when={showStarter} collapse>
         <div className="home-centered-div" onClick={handleToggleShow}>
           <Avatar alt="Me" src={ME} className={classes.large} />
+
           <Typography variant="h3" className="home-text1">
             Hey! I am <br /> Abdul Haseeb
           </Typography>

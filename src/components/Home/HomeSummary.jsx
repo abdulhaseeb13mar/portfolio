@@ -11,10 +11,10 @@ function HomeSummary(props) {
   // eslint-disable-next-line no-unused-vars
   const [subRoutes, setSubRoutes] = useContext(SubRoutesContext);
 
-  const goToAboutPage = () => {
-    setTab(1);
+  const goToPage = (link, tab) => {
+    setTab(tab);
     setSubRoutes(true);
-    props.history.push("/about");
+    props.history.push(link);
   };
 
   return (
@@ -38,10 +38,13 @@ function HomeSummary(props) {
                 variant="contained"
                 color="secondary"
                 className="home-MySummary-btns-knowMe"
-                onClick={goToAboutPage}>
+                onClick={() => goToPage("./about", 1)}>
                 Know me more
               </Button>
-              <Button variant="contained" className="home-MySummary-btns-projects">
+              <Button
+                variant="contained"
+                className="home-MySummary-btns-projects"
+                onClick={() => goToPage("./projects", 2)}>
                 My Projects
               </Button>
             </div>

@@ -20,7 +20,7 @@ function ProjectCard(props) {
   };
   return (
     <div style={{ marginTop: "20px" }}>
-      <Card className={classes.root}>
+      <Card className={classes.root} onClick={handlePhotosLink}>
         <CardActionArea>
           <CardMedia className={classes.media} image={project.cardPhoto} title="Contemplative Reptile" />
           <CardContent>

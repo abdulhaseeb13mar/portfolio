@@ -74,9 +74,6 @@ function Header(props) {
           <ListItem button>
             <ListItemText onClick={() => handleTabsChange(2, "/projects", "d")}>Projects</ListItemText>
           </ListItem>
-          <ListItem button>
-            <ListItemText>Contact Me</ListItemText>
-          </ListItem>
         </List>
       </Drawer>
     </div>
