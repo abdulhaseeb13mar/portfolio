@@ -28,7 +28,7 @@ function DialogComp(props) {
           </Toolbar>
         </AppBar>
         {props.dialogPhotos && (
-          <Carousel showArrows={true}>
+          <Carousel showThumbs={false} showArrows={true}>
             {props.dialogPhotos.map((photo) => {
               return (
                 <div>

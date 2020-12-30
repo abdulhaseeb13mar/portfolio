@@ -55,7 +55,7 @@ export default [
     name: "ShareFoodPakistan Mobile App",
     cardPhoto: ShareFoodPakistanPhotos.card,
     description:
-      "A Food Sharing app to let your access food not go to waste instead you can post it and give it someone needy or even sell it",
+      "A Food Sharing app to let your excess food not go to waste instead you can post it and give it someone needy or even sell it",
     technologies: {
       react: TechnologiesIcons.react,
       js: TechnologiesIcons.js,

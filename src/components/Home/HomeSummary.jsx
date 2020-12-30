@@ -30,7 +30,7 @@ function HomeSummary(props) {
           <div className="MySummary-summary-details">
             <Typography variant="subtitle1">
               Graduated from NED University of Engineering and Technology. <br />
-              Started my careeer with keen intereast in the web development and front end. <br />
+              Started my career with keen interest in the web development and front end. <br />
               My Expertise lies in the JavaScript language and React.
             </Typography>
             <div className="home-MySummary-btns-div">
