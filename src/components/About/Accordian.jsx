@@ -36,9 +36,7 @@ function SimpleAccordion() {
           <Typography className={classes.heading}>Who I am</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            22 years old Software Engineer who graduated from NED, currently working as React Developer at DigitalWaze.
-          </Typography>
+          <Typography>22 years old Software Engineer who graduated from NED, Founder of the M10Labs.</Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -90,7 +88,9 @@ function SimpleAccordion() {
         <AccordionDetails>
           <Typography>
             <ul>
-              <li style={{ fontWeight: "bold" }}>Winner of the Best FYP 2020 in Software Engineering at NED</li>
+              <li style={{ fontWeight: "bold" }}>
+                Winner of the Best Final Year Project 2020 in Software Engineering at NED
+              </li>
               <li>Winner of the Best C project at tech exhibition 2017 at NED</li>
               <li>Runner up in Techera startup project for Home Automation System</li>
               <li>Certificate of Excellence for exceptional performance at NED Academy as Web Developer</li>

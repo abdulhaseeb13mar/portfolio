@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 
-export const TabContext = React.createContext("TabContext");
-export const SubRoutesContext = React.createContext("SubRoutesContext");
-export const ShowHeaderContext = React.createContext("ShowHeaderContext");
+export const TabContext = createContext("TabContext");
+export const SubRoutesContext = createContext("SubRoutesContext");
+export const ShowHeaderContext = createContext("ShowHeaderContext");
 
 const Store = ({ children }) => {
   const [tab, setTab] = useState(0);
