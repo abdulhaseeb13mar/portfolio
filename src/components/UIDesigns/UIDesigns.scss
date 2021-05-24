@@ -1,0 +1,35 @@
+.All-Cards-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .Font-Card-div {
+    width: 30%;
+    min-width: 331px;
+    align-self: stretch;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .Font-Card-Txt {
+      color: aliceblue;
+    }
+
+    .Font-Card-Img {
+      width: 20%;
+      min-width: 220px;
+      transition: ease-in-out 0.35s;
+      cursor: pointer;
+      filter: drop-shadow(2px 4px 8px black);
+    }
+
+    .Font-Card-Img:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(15px 6px 11px black);
+    }
+  }
+}

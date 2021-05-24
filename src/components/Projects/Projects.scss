@@ -6,3 +6,8 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.dialog-image-carousal {
+  height: calc(100vh - 64px);
+  width: auto !important;
+}

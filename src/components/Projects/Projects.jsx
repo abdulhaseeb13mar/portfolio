@@ -3,7 +3,11 @@ import ProjectCard from "./ProjectCard";
 import ProjectsData from "./ProjectsData";
 import DialogComp from "./Dialog";
 import Zoom from "react-reveal/Zoom";
-import { ShowHeaderContext, TabContext, SubRoutesContext } from "../../store/Store";
+import {
+  ShowHeaderContext,
+  TabContext,
+  SubRoutesContext,
+} from "../../store/Store";
 import "./Projects.scss";
 
 function Projects() {
@@ -12,6 +16,7 @@ function Projects() {
   }, []);
   const [dialogPhotos, setDialogPhotos] = useState(null);
   const [dialog, setDialog] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [showHeader, setShowHeader] = useContext(ShowHeaderContext);
   // eslint-disable-next-line no-unused-vars
   const [tab, setTab] = useContext(TabContext);
@@ -47,7 +52,11 @@ function Projects() {
           );
         })}
       </div>
-      <DialogComp open={dialog} dialogPhotos={dialogPhotos} close={handleDialogClose} />
+      <DialogComp
+        open={dialog}
+        dialogPhotos={dialogPhotos}
+        close={handleDialogClose}
+      />
     </>
   );
 }

@@ -43,7 +43,8 @@ function Header(props) {
           backgroundColor: subRoutes && "#424242",
           transition: "0.3s ease-in-out",
           color: subRoutes && "white",
-        }}>
+        }}
+      >
         {MediaQueryMatches ? (
           <Toolbar>
             <IconButton
@@ -51,28 +52,56 @@ function Header(props) {
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
-              onClick={handleToggleDrawer}>
+              onClick={handleToggleDrawer}
+            >
               <MenuIcon style={{ color: "white" }} />
             </IconButton>
           </Toolbar>
         ) : (
-          <Tabs value={tab} classes={{ indicator: classes.tabindicator }} TabIndicatorProps={{}}>
+          <Tabs
+            value={tab}
+            classes={{ indicator: classes.tabindicator }}
+            TabIndicatorProps={{}}
+          >
             <Tab label="Home" onClick={() => handleTabsChange(0, "/")} />
-            <Tab label="About Me" onClick={() => handleTabsChange(1, "/about")} />
-            <Tab label="Projects" onClick={() => handleTabsChange(2, "/projects")} />
+            <Tab
+              label="About Me"
+              onClick={() => handleTabsChange(1, "/about")}
+            />
+            <Tab
+              label="Projects"
+              onClick={() => handleTabsChange(2, "/projects")}
+            />
+            <Tab
+              label="React Native Designs"
+              onClick={() => handleTabsChange(3, "/ui-designs")}
+            />
           </Tabs>
         )}
       </AppBar>
       <Drawer anchor="top" open={drawerOpen} onClose={handleToggleDrawer}>
         <List>
           <ListItem button>
-            <ListItemText onClick={() => handleTabsChange(0, "/", "d")}>Home</ListItemText>
+            <ListItemText onClick={() => handleTabsChange(0, "/", "d")}>
+              Home
+            </ListItemText>
           </ListItem>
           <ListItem button>
-            <ListItemText onClick={() => handleTabsChange(1, "/about", "d")}>About Me</ListItemText>
+            <ListItemText onClick={() => handleTabsChange(1, "/about", "d")}>
+              About Me
+            </ListItemText>
           </ListItem>
           <ListItem button>
-            <ListItemText onClick={() => handleTabsChange(2, "/projects", "d")}>Projects</ListItemText>
+            <ListItemText onClick={() => handleTabsChange(2, "/projects", "d")}>
+              Projects
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemText
+              onClick={() => handleTabsChange(3, "/ui-designs", "d")}
+            >
+              React Native Designs
+            </ListItemText>
           </ListItem>
         </List>
       </Drawer>

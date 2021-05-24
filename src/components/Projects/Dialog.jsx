@@ -1,8 +1,16 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import { Dialog, AppBar, Toolbar, IconButton, makeStyles, Slide } from "@material-ui/core";
+import {
+  Dialog,
+  AppBar,
+  Toolbar,
+  IconButton,
+  makeStyles,
+  Slide,
+} from "@material-ui/core";
 import { Close } from "@material-ui/icons";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./Projects.scss";
 
 function DialogComp(props) {
   const classes = useStyles();
@@ -18,10 +26,16 @@ function DialogComp(props) {
         open={props.open}
         onClose={handleClose}
         TransitionComponent={Transition}
-        PaperProps={{ style: { backgroundColor: "#212121" } }}>
+        PaperProps={{ style: { backgroundColor: "#212121" } }}
+      >
         <AppBar color="secondary" className={classes.appBar}>
           <Toolbar>
-            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+            <IconButton
+              edge="start"
+              color="inherit"
+              onClick={handleClose}
+              aria-label="close"
+            >
               <Close />
             </IconButton>
             {/* <Typography>Family Wins Web App</Typography> */}
@@ -32,7 +46,11 @@ function DialogComp(props) {
             {props.dialogPhotos.map((photo) => {
               return (
                 <div>
-                  <img src={photo} alt="img" />
+                  <img
+                    src={photo}
+                    alt="img"
+                    className="dialog-image-carousal"
+                  />
                 </div>
               );
             })}

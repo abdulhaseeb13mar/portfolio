@@ -4,7 +4,11 @@ import MeInFrame from "../../assets/Aboutus/MeInFrame.png";
 import Zoom from "react-reveal/Zoom";
 import Accordian from "./Accordian";
 import MyName from "../../assets/Aboutus/name.png";
-import { ShowHeaderContext, TabContext, SubRoutesContext } from "../../store/Store";
+import {
+  ShowHeaderContext,
+  TabContext,
+  SubRoutesContext,
+} from "../../store/Store";
 import "./About.scss";
 
 function About() {

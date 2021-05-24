@@ -36,7 +36,7 @@ function SimpleAccordion() {
           <Typography className={classes.heading}>Who I am</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>22 years old Software Engineer who graduated from NED, Founder of the M10Labs.</Typography>
+          <Typography>23 years old Software Engineer who graduated from NED, Founder of the M10Labs.</Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion>
