@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useContext } from "react";
 import { Grid } from "@material-ui/core";
 import MeInFrame from "../../assets/Aboutus/MeInFrame.png";
@@ -13,9 +15,7 @@ import "./About.scss";
 
 function About() {
   const [showHeader, setShowHeader] = useContext(ShowHeaderContext);
-  // eslint-disable-next-line no-unused-vars
   const [tab, setTab] = useContext(TabContext);
-  // eslint-disable-next-line no-unused-vars
   const [subRoutes, setSubRoutes] = useContext(SubRoutesContext);
   useEffect(() => {
     makeTrue();

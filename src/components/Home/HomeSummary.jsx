@@ -29,22 +29,27 @@ function HomeSummary(props) {
           </div>
           <div className="MySummary-summary-details">
             <Typography variant="subtitle1">
-              Graduated from NED University of Engineering and Technology. <br />
-              Started my career with keen interest in the web development and front end. <br />
-              My Expertise lies in the JavaScript language and React.
+              Graduated from NED University of Engineering and Technology.{" "}
+              <br />
+              Now working as a Web and Mobile Engineer at Xord. <br />
+              Started my career with keen interest in the web development and
+              front end. <br />
+              My Expertise lies in React and Blockchain. <br />
             </Typography>
             <div className="home-MySummary-btns-div">
               <Button
                 variant="contained"
                 color="secondary"
                 className="home-MySummary-btns-knowMe"
-                onClick={() => goToPage("./about", 1)}>
+                onClick={() => goToPage("./about", 1)}
+              >
                 Know me more
               </Button>
               <Button
                 variant="contained"
                 className="home-MySummary-btns-projects"
-                onClick={() => goToPage("./projects", 2)}>
+                onClick={() => goToPage("./projects", 2)}
+              >
                 My Projects
               </Button>
             </div>

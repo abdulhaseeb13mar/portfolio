@@ -2,6 +2,10 @@
 import TechnologiesIcons from "../../assets/Technologies-Icons";
 
 // Project photos imports
+import UnipilotPhotos from "../../assets/Unipilot";
+import OvoPhotos from "../../assets/Ovo";
+import SonarWalletPhotos from "../../assets/SonarWallet";
+import NumioPhotos from "../../assets/Numio";
 import FamilyWinsPhotos from "../../assets/FamilyWins";
 import SlackClonePhotos from "../../assets/SlackClone";
 import ToDoAppPhotos from "../../assets/TodoApp";
@@ -10,6 +14,62 @@ import ShareFoodPakistanPhotos from "../../assets/ShareFoodPakistan";
 import HealthEarnPhotos from "../../assets/HealthEarn";
 
 export default [
+  {
+    name: "UNIPILOT",
+    cardPhoto: UnipilotPhotos.card,
+    description:
+      "Unipilot is a concentrated liquidity manager on uniswap. that helps you to gain maximum APR on various token pools",
+    technologies: {
+      react: TechnologiesIcons.react,
+      js: TechnologiesIcons.js,
+      ethereum: TechnologiesIcons.ethereum,
+    },
+    github: false,
+    demo: "https://app.unipilot.io/",
+    photos: UnipilotPhotos.dialog,
+  },
+  {
+    name: "Sonar Wallet",
+    cardPhoto: SonarWalletPhotos.card,
+    description:
+      "A crypto Wallet Extension that let's you handle your crypto assets on multiple chains including multiple wallets",
+    technologies: {
+      react: TechnologiesIcons.react,
+      js: TechnologiesIcons.js,
+      ethereum: TechnologiesIcons.ethereum,
+    },
+    github: false,
+    demo: false,
+    photos: SonarWalletPhotos.dialog,
+  },
+  {
+    name: "Numio",
+    cardPhoto: NumioPhotos.card,
+    description:
+      "An Ethereum Layer 2 scaling solution that lets you make instant Ethereum transactions with significantly lower gas fees",
+    technologies: {
+      react: TechnologiesIcons.react,
+      js: TechnologiesIcons.js,
+      ethereum: TechnologiesIcons.ethereum,
+    },
+    github: false,
+    demo: "https://play.google.com/store/apps/details?id=com.numio.pay",
+    photos: NumioPhotos.dialog,
+  },
+  {
+    name: "OVO",
+    cardPhoto: OvoPhotos.card,
+    description:
+      "A mobile Application crypto wallet for Ethereum. That allows users to send and receive crypto coins in a secure way.",
+    technologies: {
+      react: TechnologiesIcons.react,
+      js: TechnologiesIcons.js,
+      ethereum: TechnologiesIcons.ethereum,
+    },
+    github: false,
+    demo: false,
+    photos: OvoPhotos.dialog,
+  },
   {
     name: "Family Wins Web App",
     cardPhoto: FamilyWinsPhotos.card,
@@ -68,7 +128,8 @@ export default [
   {
     name: "Interactive To-Do App",
     cardPhoto: ToDoAppPhotos.card,
-    description: "A To do app with a trello like drag n drop feature for the tasks",
+    description:
+      "A To do app with a trello like drag n drop feature for the tasks",
     technologies: {
       html: TechnologiesIcons.html,
       css: TechnologiesIcons.css,
@@ -81,7 +142,8 @@ export default [
   {
     name: "Tic Tac Toe Game",
     cardPhoto: TictactoePhotos.card,
-    description: "A Simple Tic tac toe game using vanilla Javascript for the logic behind. with eye catching UI",
+    description:
+      "A Simple Tic tac toe game using vanilla Javascript for the logic behind. with eye catching UI",
     technologies: {
       html: TechnologiesIcons.html,
       css: TechnologiesIcons.css,

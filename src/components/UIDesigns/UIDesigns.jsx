@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useContext } from "react";
 import Designs from "../../assets/Designs";
 import { Typography } from "@material-ui/core";
@@ -14,11 +16,8 @@ function UIDesigns(props) {
     makeTrue();
   }, []);
 
-  // eslint-disable-next-line no-unused-vars
   const [showHeader, setShowHeader] = useContext(ShowHeaderContext);
-  // eslint-disable-next-line no-unused-vars
   const [tab, setTab] = useContext(TabContext);
-  // eslint-disable-next-line no-unused-vars
   const [subRoutes, setSubRoutes] = useContext(SubRoutesContext);
 
   const makeTrue = () => {

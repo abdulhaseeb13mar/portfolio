@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import { ShowHeaderContext } from "./store/Store";
@@ -7,7 +8,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import FabComp from "./components/Fab/FabComp";
 import Header from "./components/Header/Header";
-import SingleDesign from "./components/SingleDesign/singleDesign";
+import SingleDesign from "./components/singleDesign/singleDesign";
 import UIDesigns from "./components/UIDesigns/UIDesigns";
 
 function Routes(props) {

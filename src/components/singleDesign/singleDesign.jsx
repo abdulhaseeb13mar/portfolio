@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useContext } from "react";
 import { Grid, Typography, useMediaQuery } from "@material-ui/core";
 import Zoom from "react-reveal/Zoom";

@@ -1,9 +1,15 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@material-ui/core";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@material-ui/core";
 
 import HTMLIcon from "../../assets/Technologies-Icons/Html-icon.png";
+import ETHIcon from "../../assets/Technologies-Icons/Ethereum-logo.png";
 import CSSIcon from "../../assets/Technologies-Icons/Css-icon.png";
 import FirebaseIcon from "../../assets/Technologies-Icons/Firebase-icon.png";
 import JSIcon from "../../assets/Technologies-Icons/Javascript-icon.png";
@@ -32,19 +38,31 @@ function SimpleAccordion() {
   return (
     <div className={classes.root}>
       <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
           <Typography className={classes.heading}>Who I am</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>23 years old Software Engineer who graduated from NED, Founder of the M10Labs.</Typography>
+          <Typography>
+            24 years old Software Engineer who graduated from NED, Now Working
+            at Xord to disrupt through web3.
+          </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
           <Typography className={classes.heading}>My Expertise</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <div className="About-technologies-div">
+            <img src={ETHIcon} alt="technologyIcon" />
             <img src={HTMLIcon} alt="technologyIcon" />
             <img src={CSSIcon} alt="technologyIcon" />
             <img src={FirebaseIcon} alt="technologyIcon" />
@@ -61,19 +79,29 @@ function SimpleAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-          <Typography className={classes.heading}>My Academic Journey</Typography>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            My Academic Journey
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
             <ul>
-              <li>First Interaction with Programming language GW BASIC in class 8</li>
+              <li>
+                First Interaction with Programming language GW BASIC in class 8
+              </li>
               <li>Choose computer science in Matriculation</li>
               <li>
-                Got <span style={{ fontWeight: "bold" }}>94.5%</span> in Matriculation
+                Got <span style={{ fontWeight: "bold" }}>94.5%</span> in
+                Matriculation
               </li>
               <li>
-                Got <span style={{ fontWeight: "bold" }}>85.45%</span> in Intermediate
+                Got <span style={{ fontWeight: "bold" }}>85.45%</span> in
+                Intermediate
               </li>
               <li>Choose Software Enginnering in NED Unversity in 2016</li>
               <li>Graduated as a Software Engineer in 2020</li>
@@ -82,18 +110,32 @@ function SimpleAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
-          <Typography className={classes.heading}>University Achievements</Typography>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography className={classes.heading}>
+            University Achievements
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
             <ul>
               <li style={{ fontWeight: "bold" }}>
-                Winner of the Best Final Year Project 2020 in Software Engineering at NED
+                Winner of the Best Final Year Project 2020 in Software
+                Engineering at NED
               </li>
-              <li>Winner of the Best C project at tech exhibition 2017 at NED</li>
-              <li>Runner up in Techera startup project for Home Automation System</li>
-              <li>Certificate of Excellence for exceptional performance at NED Academy as Web Developer</li>
+              <li>
+                Winner of the Best C project at tech exhibition 2017 at NED
+              </li>
+              <li>
+                Runner up in Techera startup project for Home Automation System
+              </li>
+              <li>
+                Certificate of Excellence for exceptional performance at NED
+                Academy as Web Developer
+              </li>
             </ul>
           </Typography>
         </AccordionDetails>

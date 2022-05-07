@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useContext } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectsData from "./ProjectsData";
@@ -16,11 +18,8 @@ function Projects() {
   }, []);
   const [dialogPhotos, setDialogPhotos] = useState(null);
   const [dialog, setDialog] = useState(false);
-  // eslint-disable-next-line no-unused-vars
   const [showHeader, setShowHeader] = useContext(ShowHeaderContext);
-  // eslint-disable-next-line no-unused-vars
   const [tab, setTab] = useContext(TabContext);
-  // eslint-disable-next-line no-unused-vars
   const [subRoutes, setSubRoutes] = useContext(SubRoutesContext);
 
   const openDialog = (photos) => {
