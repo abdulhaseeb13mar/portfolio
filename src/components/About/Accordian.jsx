@@ -21,6 +21,7 @@ import NodeJSIcon from "../../assets/Technologies-Icons/nodeJsIcon.png";
 import ReduxIcon from "../../assets/Technologies-Icons/reduxicon.png";
 import ShopifyIcon from "../../assets/Technologies-Icons/shopifyicon.png";
 import CIcon from "../../assets/Technologies-Icons/cicon.png";
+import TSIcon from "../../assets/Technologies-Icons/Typescript-icon.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,19 +63,20 @@ function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <div className="About-technologies-div">
-            <img src={ETHIcon} alt="technologyIcon" />
+            <img src={ReactIcon} alt="technologyIcon" />
+            <img src={TSIcon} alt="technologyIcon" />
+            <img src={JSIcon} alt="technologyIcon" />
+            <img src={NodeJSIcon} alt="technologyIcon" />
             <img src={HTMLIcon} alt="technologyIcon" />
             <img src={CSSIcon} alt="technologyIcon" />
-            <img src={FirebaseIcon} alt="technologyIcon" />
-            <img src={JSIcon} alt="technologyIcon" />
-            <img src={ReactIcon} alt="technologyIcon" />
-            <img src={ArduinoIcon} alt="technologyIcon" />
-            <img src={VueIcon} alt="technologyIcon" />
+            <img src={ETHIcon} alt="technologyIcon" />
             <img src={MaterialIcon} alt="technologyIcon" />
-            <img src={NodeJSIcon} alt="technologyIcon" />
             <img src={ReduxIcon} alt="technologyIcon" />
-            <img src={ShopifyIcon} alt="technologyIcon" />
+            <img src={FirebaseIcon} alt="technologyIcon" />
             <img src={CIcon} alt="technologyIcon" />
+            <img src={VueIcon} alt="technologyIcon" />
+            <img src={ArduinoIcon} alt="technologyIcon" />
+            <img src={ShopifyIcon} alt="technologyIcon" />
           </div>
         </AccordionDetails>
       </Accordion>
