@@ -31,7 +31,7 @@ function HomeSummary(props) {
             <Typography variant="subtitle1">
               Graduated from NED University of Engineering and Technology.{" "}
               <br />
-              Now working as a Web and Mobile Engineer at Xord. <br />
+              Now working as a Web3 Engineer at Xord. <br />
               Started my career with keen interest in the web development and
               front end. <br />
               My Expertise lies in React and Blockchain. <br />
