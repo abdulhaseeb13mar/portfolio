@@ -5,7 +5,7 @@ import HomeSummary from "./HomeSummary";
 import { makeStyles } from "@material-ui/core/styles";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
-import ME from "../../assets/me.jpg";
+import ME from "../../assets/me.png";
 import "./Home.scss";
 
 function Home(props) {
@@ -27,14 +27,20 @@ function Home(props) {
     setShowStarter(false);
     setShowHeader(true);
     setTimeout(() => {
-      document.getElementsByClassName("home-centered-div")[0].style.display = "none";
-      document.getElementsByClassName("home-MySummary-div")[0].style.display = "flex";
+      document.getElementsByClassName("home-centered-div")[0].style.display =
+        "none";
+      document.getElementsByClassName("home-MySummary-div")[0].style.display =
+        "flex";
     }, 300);
   };
 
   return (
     <>
-      <Grid className="main-home-wrapper" container style={{ opacity: showHeader ? 0.7 : 1 }}></Grid>
+      <Grid
+        className="main-home-wrapper"
+        container
+        style={{ opacity: showHeader ? 0.7 : 1 }}
+      ></Grid>
       <Fade left when={showHeader} collapse>
         <HomeSummary history={props.history} />
       </Fade>

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { TabContext, SubRoutesContext } from "../../store/Store";
 import { Typography, Avatar, makeStyles, Button } from "@material-ui/core";
-import ME from "../../assets/me.jpg";
+import ME from "../../assets/me.png";
 import "./Home.scss";
 
 function HomeSummary(props) {
