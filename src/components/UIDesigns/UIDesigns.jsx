@@ -23,7 +23,7 @@ function UIDesigns(props) {
   const makeTrue = () => {
     setTimeout(() => {
       setShowHeader(true);
-      setTab(3);
+      setTab(4);
       setSubRoutes(true);
     }, 100);
   };

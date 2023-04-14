@@ -73,8 +73,12 @@ function Header(props) {
               onClick={() => handleTabsChange(2, "/projects")}
             />
             <Tab
+              label="My Articles"
+              onClick={() => handleTabsChange(3, "/articles")}
+            />
+            <Tab
               label="React Native Designs"
-              onClick={() => handleTabsChange(3, "/ui-designs")}
+              onClick={() => handleTabsChange(4, "/ui-designs")}
             />
           </Tabs>
         )}
@@ -97,8 +101,13 @@ function Header(props) {
             </ListItemText>
           </ListItem>
           <ListItem button>
+            <ListItemText onClick={() => handleTabsChange(3, "/articles", "d")}>
+              My Articles
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
             <ListItemText
-              onClick={() => handleTabsChange(3, "/ui-designs", "d")}
+              onClick={() => handleTabsChange(4, "/ui-designs", "d")}
             >
               React Native Designs
             </ListItemText>

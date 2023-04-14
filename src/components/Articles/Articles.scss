@@ -1,0 +1,17 @@
+.article-card-container {
+  margin-top: 20px;
+}
+
+.article-categories-container {
+  flex-wrap: wrap;
+}
+
+.article-single-category {
+  margin: 5px 5px 5px 5px;
+  padding: 4px 7px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 13px;
+  flex-wrap: wrap;
+}

@@ -10,6 +10,7 @@ import FabComp from "./components/Fab/FabComp";
 import Header from "./components/Header/Header";
 import SingleDesign from "./components/singleDesign/singleDesign";
 import UIDesigns from "./components/UIDesigns/UIDesigns";
+import Articles from "./components/Articles/Articles";
 
 function Routes(props) {
   const [showHeader, setShowHeader] = useContext(ShowHeaderContext);
@@ -25,6 +26,7 @@ function Routes(props) {
           <Route path="/projects" component={Projects} />
           <Route path="/ui-designs" component={UIDesigns} />
           <Route path="/single-design" component={SingleDesign} />
+          <Route path="/articles" component={Articles} />
           <Redirect to="/" />
         </Switch>
       </main>
